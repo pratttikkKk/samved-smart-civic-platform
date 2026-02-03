@@ -1,0 +1,239 @@
+/* ================================
+   GLOBAL RESET & BASE THEME
+================================ */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+}
+
+/* ================================
+   HEADER
+================================ */
+header {
+  padding: 22px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 34px;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin-top: 6px;
+  font-size: 14px;
+  color: #cfd8dc;
+}
+
+/* ================================
+   STATS CARDS
+================================ */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  padding: 24px;
+}
+
+.card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card span {
+  display: block;
+  margin-top: 10px;
+  font-size: 34px;
+  font-weight: bold;
+}
+
+/* Status color accents */
+.pending {
+  border-left: 6px solid #e53935;
+}
+.progress {
+  border-left: 6px solid #fb8c00;
+}
+.resolved {
+  border-left: 6px solid #43a047;
+}
+
+/* ================================
+   WARD ANALYTICS
+================================ */
+.ward {
+  margin: 10px 24px;
+  padding: 22px;
+  background: rgba(0,0,0,0.25);
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.3);
+}
+
+.ward h2 {
+  margin-top: 0;
+  font-size: 22px;
+}
+
+.ward input {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  width: 180px;
+  font-size: 14px;
+}
+
+.ward button {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+  margin-left: 10px;
+}
+
+.ward p {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+/* ================================
+   KANBAN BOARD
+================================ */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  padding: 24px;
+}
+
+.column {
+  background: rgba(255,255,255,0.06);
+  border-radius: 18px;
+  padding: 14px;
+  min-height: 480px;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05);
+}
+
+.column h2 {
+  text-align: center;
+  margin: 6px 0 12px;
+  font-size: 20px;
+}
+
+/* ================================
+   COMPLAINT CARD
+================================ */
+.complaint-card {
+  background: linear-gradient(145deg, #2c5364, #1c3947);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  animation: fadeUp 0.4s ease;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.complaint-card h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.complaint-card p {
+  margin: 6px 0;
+  font-size: 13px;
+  color: #e0f2f1;
+}
+
+/* ================================
+   IMAGES
+================================ */
+.complaint-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+/* ================================
+   ACTION CONTROLS
+================================ */
+.complaint-card select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 8px;
+  border-radius: 8px;
+  border: none;
+}
+
+.complaint-card input[type="file"] {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.complaint-card button {
+  margin-top: 8px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: linear-gradient(135deg, #43a047, #2e7d32);
+  color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.complaint-card button:hover {
+  transform: scale(1.02);
+}
+.delete-btn {
+  margin-top: 6px;
+  width: 100%;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: linear-gradient(135deg, #e53935, #b71c1c);
+  color: #fff;
+}
+
+
+/* ================================
+   RESPONSIVE (PROJECTOR SAFE)
+================================ */
+@media (max-width: 1100px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .board {
+    grid-template-columns: 1fr;
+  }
+}

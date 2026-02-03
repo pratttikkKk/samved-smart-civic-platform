@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SAMVED Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>SAMVED Admin Command Center</h1>
+  <p>Solapur Smart Governance Dashboard</p>
+</header>
+
+<section class="stats">
+  <div class="card">Total<br><span id="totalComplaints">0</span></div>
+  <div class="card pending">Pending<br><span id="pendingCount">0</span></div>
+  <div class="card progress">In Progress<br><span id="progressCount">0</span></div>
+  <div class="card resolved">Resolved<br><span id="resolvedCount">0</span></div>
+</section>
+
+<section class="ward">
+  <h2>Ward Analytics</h2>
+  <input id="wardInput" placeholder="Ward No">
+  <button onclick="loadWardScore()">Analyze</button>
+  <p>⭐ Avg Rating: <span id="avgRating">-</span></p>
+  <p>📊 Total Ratings: <span id="ratingCount">-</span></p>
+</section>
+
+<section class="board">
+  <div class="column"><h2>🟥 Pending</h2><div id="pendingList"></div></div>
+  <div class="column"><h2>🟧 In Progress</h2><div id="progressList"></div></div>
+  <div class="column"><h2>🟩 Resolved</h2><div id="resolvedList"></div></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
